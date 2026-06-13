@@ -1,0 +1,50 @@
+/* ══════════════════════════════
+   APPOINTMENTS — Responsive
+══════════════════════════════ */
+
+.appt-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.appt-summary-card {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-top: 3px solid;
+  text-align: center;
+  box-shadow: var(--shadow-xs);
+}
+
+.asc-count { font-size: 26px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+.asc-label { font-size: 12px; color: var(--text-muted); font-weight: 600; }
+
+/* Detail modal */
+.appt-detail-grid { display: flex; flex-direction: column; }
+
+.appt-detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--gray-100);
+  gap: 8px;
+}
+.appt-detail-row:last-child { border-bottom: none; }
+
+.apdt-label { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px; flex-shrink: 0; }
+.apdt-val   { font-size: 14px; color: var(--text-dark); font-weight: 500; text-align: right; }
+
+/* ─ Responsive ─ */
+@media (max-width: 768px) {
+  .appt-summary { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .asc-count { font-size: 22px; }
+}
+
+@media (max-width: 480px) {
+  .appt-summary { grid-template-columns: repeat(2, 1fr); }
+  .appt-summary-card { padding: 12px; }
+}

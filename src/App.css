@@ -1,0 +1,11 @@
+html { scroll-behavior: smooth; }
+main { display: block; }
+
+/* Default: sections clear the 80px fixed navbar */
+section[id] { scroll-margin-top: 80px; }
+
+/* Animations used globally */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
